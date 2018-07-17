@@ -30,7 +30,27 @@ $('.liBtn').click(function() {
   $('ul').append('<li>' + newList)
 })
 
+//additonal No.4
+$('ul').hover(function() {
+  $(this).css({'color': 'lightblue', 'font-size': '2rem'})
+})
+
 // No.14
+// $('.lastBtn').click(function() {
+//   $('body').css('background-color', 'tomato');
+// });
+
+var colors = ['red', 'blue', 'green', 'yellow'], // the color choices
+index = 0; //index of the current color
+
 $('.lastBtn').click(function() {
-  $('body').css('background-color', 'tomato');
+  $('body').css('background-color', colors[index]);
+  index = (index + 1) % colors.length; //increment index to point to the next color (if it goes beyond the length of the colors array get it back to 0 using the nodulo%)
 });
+//https://stackoverflow.com/questions/43285552/how-to-change-background-color-multiple-times-with-one-button-only-javascript-p
+
+
+// addional No.2
+$('h1').click(function(){
+  $(this).fadeToggle('slow');
+})
